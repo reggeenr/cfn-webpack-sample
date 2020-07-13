@@ -1,0 +1,18 @@
+{
+  "name": "cfn-webpack-sample",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "scripts": {
+    "build:dev": "webpack --mode=development --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
+    "deploy:one": "ibmcloud fn action update my-action-one dist/action-one.bundle.js --kind nodejs:10",
+    "deploy:two": "ibmcloud fn action update my-action-two dist/action-two.bundle.js --kind nodejs:10"
+  },
+  "dependencies": {
+    "left-pad": "1.1.3"
+  },
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
